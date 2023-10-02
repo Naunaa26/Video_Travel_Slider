@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Travel</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explore</a>
+                <a href="#">Galerry</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <video class="video-slide active" src="assets/mountain.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/car.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/nature.mp4" autoplay muted loop></video>
+
+
+        <div class="content active">
+            <h1>Wonderful.<br><span>Island</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, molestiae quo ut sunt hic qui accusantium quia neque ipsa pariatur architecto praesentium vel laborum laboriosam? Architecto, perspiciatis? Iure nulla quibusdam quo consectetur ut aut, sit beatae itaque accusantium repellendus assumenda illo tempore autem? Obcaecati quaerat blanditiis reprehenderit delectus facilis laudantium facere quos impedit, distinctio dolor totam dolore sit sequi, repellat aperiam? Sed suscipit tempora ratione itaque repellat incidunt natus porro.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Beach<br><span>panorama</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, molestiae quo ut sunt hic qui accusantium quia neque ipsa pariatur architecto praesentium vel laborum laboriosam? Architecto, perspiciatis? Iure nulla quibusdam quo consectetur ut aut, sit beatae itaque accusantium repellendus assumenda illo tempore autem? Obcaecati quaerat blanditiis reprehenderit delectus facilis laudantium facere quos impedit, distinctio dolor totam dolore sit sequi, repellat aperiam? Sed suscipit tempora ratione itaque repellat incidunt natus porro.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Traveling.<br><span>holiday</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, molestiae quo ut sunt hic qui accusantium quia neque ipsa pariatur architecto praesentium vel laborum laboriosam? Architecto, perspiciatis? Iure nulla quibusdam quo consectetur ut aut, sit beatae itaque accusantium repellendus assumenda illo tempore autem? Obcaecati quaerat blanditiis reprehenderit delectus facilis laudantium facere quos impedit, distinctio dolor totam dolore sit sequi, repellat aperiam? Sed suscipit tempora ratione itaque repellat incidunt natus porro.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Skating.<br><span>sport</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, molestiae quo ut sunt hic qui accusantium quia neque ipsa pariatur architecto praesentium vel laborum laboriosam? Architecto, perspiciatis? Iure nulla quibusdam quo consectetur ut aut, sit beatae itaque accusantium repellendus assumenda illo tempore autem? Obcaecati quaerat blanditiis reprehenderit delectus facilis laudantium facere quos impedit, distinctio dolor totam dolore sit sequi, repellat aperiam? Sed suscipit tempora ratione itaque repellat incidunt natus porro.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>See Nature.<br><span>relax</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, molestiae quo ut sunt hic qui accusantium quia neque ipsa pariatur architecto praesentium vel laborum laboriosam? Architecto, perspiciatis? Iure nulla quibusdam quo consectetur ut aut, sit beatae itaque accusantium repellendus assumenda illo tempore autem? Obcaecati quaerat blanditiis reprehenderit delectus facilis laudantium facere quos impedit, distinctio dolor totam dolore sit sequi, repellat aperiam? Sed suscipit tempora ratione itaque repellat incidunt natus porro.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        const menuBTn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBTn.addEventListener("click", () => {
+            menuBTn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        //Javascript video slider
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active")
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active")
+            });
+
+            contents.forEach((cont) => {
+                cont.classList.remove("active")
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+    </script>
+
+</body>
+</html>
